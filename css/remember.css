@@ -165,7 +165,7 @@ body {
 
 /* ATRÁS */
 .flip-card-back {
-    background: linear-gradient(135deg, #f093fb, #f5576c);
+    background: linear-gradient(135deg, #57cef5, #374dce);
     color: #fff;
     transform: rotateY(180deg);
     display: flex;
