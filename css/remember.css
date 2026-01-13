@@ -10,7 +10,7 @@
 
 /* BODY */
 body {
-    background: linear-gradient(135deg, #6963ff 0%, #4a8ad3 50%, #6ec1f9 100%);
+    background: linear-gradient(135deg, #000000 0%, #305c8e 50%, #6ec1f9 100%);
     min-height: 100vh;
     padding: 20px;
     position: relative;
