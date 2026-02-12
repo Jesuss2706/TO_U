@@ -1,0 +1,82 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Carta FY <3</title>
+    <link rel="stylesheet" href="css/letterFY.css">
+    <link rel="icon" href="img/heart.png" type="image/x-icon">
+</head>
+
+<body>
+<div id="passwordScreen" class="screen password-screen active">
+<div id="hearts-container"></div>
+<h2>🔒 Enter password</h2>
+  <div class="input-display" id="inputDisplay">••••</div>
+  <div class="keypad">
+    <button class="key" onclick="enterDigit('1')">1</button>
+    <button class="key" onclick="enterDigit('2')">2</button>
+    <button class="key" onclick="enterDigit('3')">3</button>
+    <button class="key" onclick="enterDigit('4')">4</button>
+    <button class="key" onclick="enterDigit('5')">5</button>
+    <button class="key" onclick="enterDigit('6')">6</button>
+    <button class="key" onclick="enterDigit('7')">7</button>
+    <button class="key" onclick="enterDigit('9')">9</button>
+    <button class="key" onclick="enterDigit('8')">8</button>
+    <div></div>
+    <button class="key" onclick="enterDigit('0')">0</button>
+    <div></div>
+  </div>
+</div>
+<div id="notepadScreen" class="screen">
+  <div class="notepad">
+    <h3>📅 14 Febrero 2026 </h3>
+    <h4>💌 Mi Niña linda</h4>
+    <p>
+      Quiero que sepas lo feliz que soy por tenerte en mi vida. Desde que llegaste, todo cambió para mejor.
+      De alguna forma tu me haces sentir que tu eres mi lugar seguro.
+    </p>
+    <p>
+      Contigo aprendi a ver lo que era el amor de verdad, en el que de alguna forma antes no supe cuidar, pero ahora te quiero demostrar de mil formas mi arrepentimiento.
+      Y por eso te amo profundamente.
+      Se que mi amor lo ves reflejado por mis pequeñas acciones y palabras sinceras.
+    </p>
+    <p></p>
+      Enserio quisiera volver a darte todo lo que te mereces y hacerte feliz todos los dais.
+    </p>
+    <p>
+      Se que lo ves dificil pero en el fondo sabes que me muero por ti.
+    </p>
+    <p>
+      Te amo con todo mi corazoncito. ♡
+    </p>
+    <p>
+        Do you want to take a picture with me? to fill the album. 
+    </p>
+  </div>
+</div>
+
+<script>
+  const correctPassword = '2225';
+  let input = '';
+  function enterDigit(digit) {
+    if (input.length < 4) {
+      input += digit;
+    }
+    const display = document.getElementById('inputDisplay');
+    display.textContent = input.padEnd(4, '•');
+    if (input.length === 4) {
+      if (input === correctPassword) {
+        document.getElementById('passwordScreen').classList.remove('active');
+        document.getElementById('notepadScreen').classList.add('active');
+      } else {
+        alert('Contraseña incorecta, intenta de nuevo');
+        input = '';
+        display.textContent = '••••';
+      }
+    }
+  }
+</script>
+<script src="hearts.js"></script>
+</body>
+</html>
