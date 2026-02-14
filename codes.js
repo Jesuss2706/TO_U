@@ -1,6 +1,5 @@
 function verificarCodigo() {
-    const codigoCorrecto = "AMOR2026";
-    const codigoIngresado = document.getElementById("codigoInput").value.trim();
+    const codigoIngresado = document.getElementById("codigoInput").value.trim().toUpperCase();
     const mensajeError = document.getElementById("mensajeError");
 
     if (codigoIngresado === "") {
@@ -8,8 +7,8 @@ function verificarCodigo() {
         return;
     }
 
-    if (codigoIngresado === codigoCorrecto) {
-        window.location.href = "sorpresa.html";
+    if (codigoIngresado === "NLS14ILY") {
+        window.location.href = "nails.html";
     } else {
         mensajeError.textContent = "Ese código no es el indicado... intenta nuevamente 💔";
     }
